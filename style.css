@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.home-page {
+    color: #ffffff;  /* Home页面的默认文字颜色为白色 */
+}
+
+header {
+    background-color: #007BFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    padding-top: 70px; 
+    padding-bottom: 80px; 
+    max-height: calc(100vh - 140px);
+    overflow-y: scroll;
+}
+
+.hero {
+    text-align: center;
+    font-size: 10rem;
+    color: #ccc;
+    padding: 150px 0;
+}
+
+.image-section {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.image-section img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    object-fit: contain;
+}
+
+.extra-space {
+    height: 250px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* About 页面专属样式 */
+.about-content {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    text-align: center;
+    color: #594557;
+}
+
+.about-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.resume-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+
+.left, .right {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.left h3, .right h3 {
+    margin-top: 20px;
+}
+
+.left p, .right p, .right ul li {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.right ul {
+    padding-left: 20px;
+}
+
+/* Gallery 页面专属样式 */
+.gallery-content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.gallery-content h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.video-section {
+    background-color: #00aaff;
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 20px;
+}
+
+.video-section h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.video-section video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 开幕动画样式 */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    flex-direction: column;
+    z-index: 2000;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+#intro.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero {
+        font-size: 6rem;
+    }
+
+    .gallery-content h1 {
+        font-size: 2rem;
+    }
+
+    .resume-layout {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .hero {
+        font-size: 8rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .hero {
+        font-size: 9rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero {
+        font-size: 10rem;
+    }
+}
+
+.project-content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.project-content h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.video-section {
+    background-color: #00aaff;
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 20px;
+}
+
+.video-section h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.video-section video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-description {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 20px;
+    color: #22aac5;
+    text-align: left;
+}
+
+.project-description h3  {
+    color: #612a2a;
+    margin-bottom: 15px;
+}
+
+.project-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.contact-content h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+form label {
+    font-size: 1.2rem;
+    text-align: left;
+    color: #333;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.alt-contact {
+    margin-top: 50px;
+}
+
+.alt-contact h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.alt-contact p, .alt-contact a {
+    color: #555;
+    font-size: 1rem;
+}
